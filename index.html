@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, ">
+        <title>
+        Heart Disease Prediction
+        </title>
+    </head>
+    <body class="nl-blurred">
+        <div class="container">
+            <header>
+                <nav class="mobile-menu">
+                    <label for="show-menu" class="show-menu">
+                        <div class="lines"></div>
+                        <span style="color: white;">heart disease Prediction</span>
+                    </label>
+                    <input type="checkbox" id="show-menu">
+                    <ul class="nav_list" id="menu">
+                        <li class="nav_item">
+                              <a href="index.html" class="nav_link active">Home</a>
+                            </li>
+                            <li class="nav_item">
+                              <a href="#about" class="nav_link">About</a>
+                            </li>
+                            <li class="nav_item">
+                              <a href="dragAndDrop.html" class="nav_link">Explore diseases</a>
+                            </li>
+                            <li class="nav_item">
+                              <a href="weather prediction.html" class="nav_link">Health calculator</a>
+                            </li>
+                    </ul>
+                </nav>
+                <h1>Heart disease prediction <span>using AIML</span></h1>
+            </header>
+        </div>
+        <div class="loader">        </div>
+        <div class="main clearfix">
+            <form id="nl-form" class="nl-form" onsubmit="return false">
+                I am
+                <input type="number" placeholder="20" value="20" id="age"/> years old
+                <select id="sex">
+                    <option value="0" selected>male</option>
+                    <option value="1">female</option>
+                </select>.
+                <br> I smoke 
+                <input type="number" placeholder="2" value="2" id="cigs"/>cigarettes daily.
+                <br> I  <select id="diabetes">
+                    <option value="0" selected>have</option>
+                    <option value="1">don't have</option>
+                </select> diabetes.
+                <br> My cholestrol level is <br>
+                <input type="number" placeholder="110" value="110" id="cholestrol"/> and my blood pressure is 
+                <input type="number" placeholder="120" value="120" id="sBP"/>/
+                <input type="number" placeholder="80" value="80" id="dBP"/>.
+                I have a heartRate of <br>about
+                 <input type="number" placeholder="72" value="72" id="heartRate"/>
+                 and my blood <br> sugar level is 
+                 <input type="number" placeholder="100" value="100" id="glucose"/>.
+            <div class="nl-submit-wrap">
+                <button class="nl-submit" type="submit" id="btn">predict</button>
+            </div>
+            <div class="nl-overlay"></div>
+            </div>
+        </form>
+       </div>
+       <again>  </again>
+
+<!-- script -->
+       <script>
+           var nlform = new NLForm(document.getElementById('nl-form'));
+       </script>
+    </body>
+</html>
