@@ -1,0 +1,143 @@
+.nl-form {
+    width: 100%;
+    margin: 0.3em auto 0 auto;
+    font-size:4em ;
+    line-height: 1.5;
+
+}
+.nl-form ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.nl-form input, .nl-form select, .nl-form button{
+    border: none;
+    background: transparent;
+    font-weight: inherit;
+    color: inherit;
+    font-family:  inherit;
+line-height: inherit;
+display: inline-block;
+padding: 0;
+margin: 0;
+}
+.nl-form input:focus{
+    outline: none;
+
+}
+.nl-field{
+    position: relative;
+    display: inline-block;
+
+}
+.nl-field.nl-field-open{
+    z-index: 10000;
+}
+.nl-field-toggle,
+.nl-form input,
+.nl-form select{
+    line-height: inherit;
+    display: inherit;
+    color: brown;
+    cursor: pointer;
+    border-bottom: 1px dashed brown;
+}
+.nl-field ul{
+    position: absolute;
+    visibility: hidden;
+    background: skyblue;
+    opacity: 0;
+    font-size: 80%;
+    top: 50%;
+    left: -0.5em;
+-webkit-transform: translateY(-40%) scale(0.9);
+-moz-transform: translateY(-40%) scale(0.9);
+transform: translateY(-40%) scale(0.9);
+ -webkit-transition: visibility 0s 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: visibility 0s 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
+
+
+}
+.nl-field.nl-field.nl-field-open ul{
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(-40%) scale(0.9);
+-moz-transform: translateY(-40%) scale(0.9);
+transform: translateY(-40%) scale(0.9);
+ -webkit-transition: visibility 0s 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: visibility 0s 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
+
+}
+.nl-field ul li{
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+.nl-dd ul li{
+    cursor: pointer;
+    padding: 0 1.5em 0 1.5em;
+white-space: nowrap;
+}
+.nl-dd ul li .nl-dd-checked{
+    color: blue;
+}
+
+.no-touch .nl-dd ul li:hover{
+    background: black;
+
+}
+.no-touch .nl-dd ul li:hover :active{
+    color: blue;
+
+}
+.nl-dd ul li .nl-dd-checked:before,
+.nl-submit :before,
+.nl-field-go:before{
+    speak: loud;
+    font-style: normal;
+    font-weight:normal ;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
+.nl-dd ul li .nl-dd-checked:before{
+    content: "/2192";
+    position: absolute;
+    right: 1em;
+    font-size: 50%;
+    line-height: 3;
+}
+ .nl-ti-text ul{
+     min-width: 8em;
+ }   
+ .nl-ti-text ul li.nl-ti-input input{
+     width: 100%;
+     padding: 0.2em 2em 0.2em 0.5em;
+     border-bottom: none;
+     color: white;
+    }
+    .nl-form .nl-field-g0{
+        position: absolute;
+        right:0;
+        top: 0;
+        height: 100%;
+        cursor: pointer;
+        background: black;
+        width: 1.8em;
+        text-align: center;
+        color: transparent;
+    }
+    .nl-field-go:before{
+        content: "/2192";
+        width: 100%;
+        font-size: 75%;
+        line-height: 2.5;
+        color: white;
+        display:block;
+    }
+    input::-webkit-input-placeholder{
+        color: azure;
+    }
+    
