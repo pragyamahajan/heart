@@ -140,4 +140,61 @@ white-space: nowrap;
     input::-webkit-input-placeholder{
         color: azure;
     }
+    input:active::-webkit-input-placeholder, input:focus::-webkit-input-placeholder{
+        color: rgb(68, 75, 75);
+    }
+    input::-moz-placeholder{
+        color: white;
+    }
+    input:active::-moz-placeholder,
+    input:focus::-moz-placeholder{
+        color: grey;
+    }
+    .nl-ti-text ul li.nl-ti-example{
+        font-size:40%;
+        font-style: italic;
+        font-weight: 400;
+        padding: 0.4em 1em;
+        color: black;
+        border-top: 1px dashed white;
+    }
+.nl-ti-text ul li.nl-ti-example em {
+    color: white;
+}
+.nl-submit-wrap{
+    margin-top: 0.4em;
+}
+.nl-form .nl-submit{
+    line-height: 3;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    background: skyblue;
+    color: white;
+    padding: 0 1em 0 0;
+    font-size: 40%;
+    font-weight: bold;
+    letter-spacing: 3px
+}
+.nl-submit:before{
+    content: "\2192";
+    color:aliceblue;
+    float: left;
+    padding:0 0.5em;
+    margin: 0 0.8em 0 0;
+    background: skyblue;
+}
+.nl-form .nl-submit:hover,
+.nl-form .nl-submit:active{
+    background: blue;
+}
+.nl-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
     
+}
