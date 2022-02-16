@@ -39,6 +39,18 @@
 		}
 	};
 
+	function NLField( form, el, type, idx ) {
+		var parsed = el.getAttribute('data-parsed');
+		if (parsed != 1) {
+			el.setAttribute('data-parsed', 1);
+			this.form = form;
+			this.elOriginal = el;
+			this.pos = idx;
+			this.type = type;
+			this._create();
+			this._initEvents();
+		}
+	}
 
 	NLField.prototype = {
 		_create : function() {
@@ -105,6 +117,23 @@
 			this.toggle.addEventListener( 'click', function( ev ) { ev.preventDefault(); ev.stopPropagation(); self._open(); } );
 			this.toggle.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); ev.stopPropagation(); self._open(); } );
 
+			if( this.type === 'dropdown' ) {
+				var opts = Array.prototype.slice.call( this.optionsList.querySelectorAll( 'li' ) );
+				opts.forEach( function( el, i ) {
+					el.addEventListener( 'click', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
+					el.addEventListener( 'hover', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ), true ); } );
+					el.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
+				} );
+			}
+			else if( this.type === 'input' ) {
+				this.getinput.addEventListener( 'keydown', function( ev ) {
+					if ( ev.keyCode == 13 ) {
+						self.close();
+					}
+				} );
+				this.inputsubmit.addEventListener( 'click', function( ev ) { ev.preventDefault(); self.close(); } );
+				this.inputsubmit.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); self.close(); } );
+			}
 		},
 		_open : function() {
 			if( this.open ) {
