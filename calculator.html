@@ -86,8 +86,82 @@
                                 </div>
                             </div>
                     </div>
-                    <div class=""
-                </div> 
+                    <div class="my-3 mx-auto d-block" id="HeightBox">
+                        <h5 class="d-inline-block">Height measuring type : &nbsp;&nbsp;</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="heightType" id="centimeter" checked value="centimeter">
+                            <label class="form-check-label" for="centimeter" aria-checked="true"><i class="fa fa-check-circle text-danger"></i centimeter></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="heightType" id="inches&foot" value="inches&foot">
+                            <label class="form-check-label" for="inches&foot"
+                            ><i class="fa fa-check-circle text-success"></i></label>
+                        </div>
+                    </div>
+                    <div id="centimeterBox">
+                        <div class="input-group mb-3 my-3">
+                            <div class="input-group-append valChanger">
+                                <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputCentimeter'). value--"><i class="fa fa-minus"></i></span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="your height in centimeter scale" id="inputCentimeter" min="1" aria-label="Amout (to the nearest dollar)">
+                            <div class="input-group-prepend valChanger" >
+                                <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputCentimeter').value++"><i class="fa fa-plus"></i></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="inchBox" style="display: none">
+                        <div class="input-group mb-3 my-3">
+                            <div class="input-group-append valChanger">
+                                <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputFoot'). value--" style="font-size: 20px;"><i class="fa fa-minus"></i></span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="your height in centimeter scale" id="inputCentimeter" min="1" aria-label="Amout (to the nearest dollar)">
+                            <div class="input-group-prepend valChanger" >
+                                <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputCentimeter').value++"><i class="fa fa-minus"></i></span>
+                            </div>
+                            <input type="number" id="inputFoot" min="1" max="8" placeholder="Foot" class="form-control" required/>
+                            <div class="input-group-prepend valChanger" style="margin-right: 10px;">
+                                <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputCentimeter').value++"><i class="fa fa-plus"></i></span>
+                            </div>
+                            <div class="input-group-append valChanger">
+                                <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputInch'). value--" style="font-size: 20px;"><i class="fa fa-minus"></i></span>
+                            </div>
+                            <input type="number" id="inputInch" min="1" max="8" placeholder="Inch" class="form-control" required/>
+                            <div class="input-group-prepend valChanger" style="margin-right: 10px;">
+                                <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputInch').value++"><i class="fa fa-plus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h5>Physical State</h5>
+                        <div class="input-group is-valid">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="physicalState">options</label>
+                            </div>
+                            <select class="custom-select" id="physicalState" required>
+                                <option value="none">Choose..</option>
+                                <option value="low">Choose..</option>
+                                <option value="normal">Choose..</option>
+                                <option value="medium">Choose..</option>
+                                <option value="high">Choose..</option>
+                                <option value="veryhigh">Choose..</option>
+                            </select>
+                        </div>
+                        <div class="valid=feedback">
+                            Choose your physical exercise type
+                        </div>
+                    </div>
+                    <div id="setting d-flex justify-content-center align-content-center">
+                        <button id="settingsBtn" class="link btn text-info text-muted font-weight-bolder"><i class="fa fa-pluse"></i>Settings</button>
+                    </div>
+                    <div id="settingSection" style="display:none;">
+                    <div class="my-3 mx-auto" id="calculateType">
+                        <h5 class="d-block"> Calculate : &nbsp;&nbsp;</h5>
+                        <div class="form-check">
+                        
+                        </div>
+                    </div>
+                    </div>
 
 
             </div>
