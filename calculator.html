@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/default.css"/>
+		<link rel="stylesheet" href="css/nav.css"/>
+		<link rel="stylesheet" href="css/component.css"/>
+		<link rel="icon" type="image/x-icon" href="img/favicon.png">
+		<title>Health Calculator</title>
+	</head>
+
+    <body>
+        <header>
+            <nav class="mobile-menu">
+				<label for="show-menu" class="show-menu">
+						<div class="lines"></div> 
+						<span style="color: #fff;">Heart Disease Prediction</span>
+				 </label>
+				<input type="checkbox" id="show-menu">
+				<ul class="nav_list" id="menu">
+					<li class="nav_item"> <a href="index.html" class="nav_link active">Home</a> </li>
+					<li class="nav_item"> <a href="" class="nav_link">About</a> </li>
+					<li class="nav_item"> <a href="" class="nav_link">Explore Diseases</a> </li>
+					<li class="nav_item"> <a href="" class="nav_link">Health Calculator</a> </li>
+				</ul>
+			 </nav>
+        </header>
+        <button id="topBtn" title="Go to top"><i class="fa fa-arrow-up"> </i></button>
+        <form id="inputForm">
+            <div class="container d-flex justify-content-center align-content-center flex-column flex-wrap">
+                <div class="card my-3 box-shadow">
+                    <div class="card-body">
+                        <div class="container demo-1">
+                            <header style="padding: 0px;">
+                                <h1>Calculate <span>BMI | BMR
+                                </span></h1>
+                            </header>
+                        </div>
+                        <div id="ageBox">
+                            <h5 class="card-title">Your age : </h5>
+                            <div class="input-group mb-3 my-3">
+                                <div class="input-group-append valChanger">
+                                    <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputAge').value--">
+                                    <i class="fa fa-minus"></i></span>
+                                </div>
+                                <input type="number" class="form-control" placeholder="Enter your current age in years" id="inputAge" max="80" min="3" aria-label="Age" required> 
+                                <div class="input-group-prepend valChanger">
+                                    <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputAge').value++">
+                                        <i class="fa fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-3 mx-auto d-block" aria-required="true" id="gender" >
+                            <h5 class="d-inline-block">gender : &nbsp;&nbsp;</h5>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                                <label class="form-check-label" for="male" aria-check="true">
+                                    <i class="fa fa-male text-danger"></i>male
+                                </label>
+
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                <label class="form-check-label" for="female">
+                                    <i class="fa fa-female text-success"></i>female
+                                </label>
+                        </div>
+                        <div id="ageBox">
+                            <h5 class="card-title">Your weight (kg) : </h5> </div>
+                            <div class="input-group mb-3 my-3">
+                                <div class="input-group-append valChanger">
+                                    <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputWeight').value--">
+                                    <i class="fa fa-minus"></i></span>
+                                </div>
+                                <input type="number" class="form-control" placeholder="Enter your weight" id="inputWeight"  aria-label="Weight" required> 
+                                <div class="input-group-prepend valChanger">
+                                    <span class="input-group-text" style="cursor: pointer;" onclick="document.getElementById('inputWeight').value++">
+                                        <i class="fa fa-plus"></i></span>
+
+                                </div>
+                            </div>
+                    </div>
+                    <div class=""
+                </div> 
+
+
+            </div>
+        </form>
+    </body>
