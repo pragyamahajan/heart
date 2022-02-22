@@ -70,4 +70,4 @@ setTimeout(() => {
    ```
         
 ## Contact
-Created by [@deveshjain](https://github.com/devesh2511) - feel free to contact me!
+Created by [@pragyamahajan](https://github.com/pragyamahajan) - feel free to contact me!
