@@ -311,7 +311,15 @@ function calculateHealth() {
 
 
         htmlForBMI = `
-        <div class="my-3 d-flex justify-content-center align-content-center flex-column text-c`e
+        <div class="my-3 d-flex justify-content-center align-content-center flex-column text-center">
+        <h5 class="card-header my-3">Your Health Statistics</h5>
+        <h3 class="card-title text-center" id="calculateTitle">Health State (BMI) : </h3>
+        <h4 class="d-block font-weight-bold mx-auto" style="font-size: 1rem;">
+        <sup><i class="fa fa-${icon} text-${textColor}"></i></sup> &nbsp;&nbsp;<span id="calorieResult"> ${explainState}
+        </span>
+        </h4>
+        </div>
+        `
 
     }
 }
