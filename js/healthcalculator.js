@@ -219,5 +219,99 @@ function calculateHealth() {
         let BMI = `${weight / (heightInMeter**2)}`
         BMI = Number(BMI).toFixed(1);
         console.log(BMI, heightInMeter);
+
+
+        let textColor;
+        let state;
+        let explainState;
+        let tips;
+        let weightText;
+        if (BMI < 18.5) {
+            state = "Underweight";
+            explainState = "Low body weight";
+            tips = "You need to gain weight by taking heavy diet";
+            textColor = 'black-50';
+            weightText = "Low weight";
+        } else if (BMI >= 18.5 && BMI <=24.9){
+            state = "normal";
+            explainState = "Standard good health";
+            tips = "Maintain similar routine. Health cannot be enhanced by taking extra or unhealthy food.";
+            textColor = 'Success';
+            weightText = "OverWeight / UnderWeight";
+        }else if (BMI > 24.9 && BMI <=29.9){
+        state = "Overweight";
+        explainState = "High body weight";
+        tips = "Don't worry. Weight loss can be followed by healthy diet and exercise.";
+        textColor = 'warning';
+        weightText = "Overweight";
+        }else if (BMI > 29.9 && BMI <=34.9){
+            state = "Obese";
+            explainState = "Obese (stage-1) : More fat and excess weight";
+            tips = "It is necessary to choose food and exercise.";
+            textColor = 'warning';
+            weightText = "High Overweight";
+        } else if (BMI > 34.9 && BMI <=39.9){
+            state = "Obese (high)";
+            explainState = "Obese (stage-2) : Excess fat and excess weight. ";
+            tips = "Need to eat moderately and exercise alot. Consult your dietician";
+            textColor = 'danger';
+            weightText = "Overweight (very high)";
+        } else {
+            state = "Extreme Obese";
+            explainState = "Extreme obesity. Risk of death.";
+            tips = "Weight control routine should be implemented immediately . Expert doctor's advice is must.";
+            textColor = 'danger';
+            weightText = "Overweight (extreme)";
+        }
+
+
+
+//from
+        let healthyBMI1 = 18.5;
+        //to
+        let healthyBMI2 = 24.9;
+        //from
+        let healthyWeight1 = `${healthyBMI1 * (heightInMeter**2)}`
+        healthyWeight1 = Math.round(healthyWeight1);
+        //to
+        let healthyWeight2 = `${healthyBMI2 * (heightInMeter**2)}`
+        healthyWeight1 = Math.round(healthyWeight2);
+
+        let healthyWeight = `${healthyWeight1} to ${healthyWeight2}`
+        let healthyBMI = `${healthyBMI1} to ${healthyBMI2}`
+
+        let averageHealthyWeight = `${(healthyWeight1 + healthyWeight2) / 2}`
+        let averageHealthyBMI = `${(healthyBMI1 + healthyBMI2) / 2}`
+
+
+        let defferenceWeight;
+        if (state === "Underweight") {
+            defferenceWeight = `${healthyWeight1 - weight}kg To ${healthyWeight2 - weight}kg`
+        } else if (state === "Normal") {
+            defferenceWeight = "(N/A) Perfect Weight"
+        } else {
+            defferenceWeight = `${weight - healthyWeight1}kg To ${weight - healthyWeight2}kg `
+        }
+
+
+        let htmlForBMI;
+        let htmlForCalories;
+        let htmlForButtons;
+
+        htmlForCalories = `<div class="my-3 d-flex justify-content-center align-content-center flex-column">
+        <h5 class="card-header text-center my-3">Your Daily ${bodyBurningText} needs</h5>
+        <h3 class="card-title text-center" id="calculateTitle">${bodyBurningText} need Per Day: </h3>
+        <h4 class="d-block font-weight-bold mx-auto style="font-size: 1.5rem;">
+        <sup><i class="fa fa-fire text-danger"></i></sup> <span id="calorieResult"> ${bodyBurning} ${bodyBurningText}/Day</span>
+        </h4>
+        </div>
+        <hr>
+        `
+
+
+
+        htmlForBMI = `
+        <div class="my-3 d-flex justify-content-center align-content-center flex-column text-c`e
+
     }
 }
