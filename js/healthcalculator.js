@@ -47,6 +47,7 @@ window.onscroll = function () {
     scrollFunction();
 }
 
+//TODO: Scroll top button
 let topBtn = document.getElementById('topBtn');
 
 function scrollFunction() {
@@ -98,6 +99,7 @@ function copyCalorie() {
 
     document.execCommand("copy");
 
+    /* Alert the copied text */
     alert("Copied the text: " + copyText.value);
 }
 
@@ -220,53 +222,51 @@ function calculateHealth() {
         BMI = Number(BMI).toFixed(1);
         console.log(BMI, heightInMeter);
 
-
+        //TODO: Justify the BMI index value
         let textColor;
         let state;
         let explainState;
         let tips;
         let weightText;
         if (BMI < 18.5) {
-            state = "Underweight";
+            state = "Underweight"
             explainState = "Low body weight";
-            tips = "You need to gain weight by taking heavy diet";
+            tips = "You need to gain weight by taking moderate food"
             textColor = 'black-50';
             weightText = "Low weight";
-        } else if (BMI >= 18.5 && BMI <=24.9){
-            state = "normal";
-            explainState = "Standard good health";
-            tips = "Maintain similar routine. Health cannot be enhanced by taking extra or unhealthy food.";
-            textColor = 'Success';
-            weightText = "OverWeight / UnderWeight";
-        }else if (BMI > 24.9 && BMI <=29.9){
-        state = "Overweight";
-        explainState = "High body weight";
-        tips = "Don't worry. Weight loss can be followed by healthy diet and exercise.";
-        textColor = 'warning';
-        weightText = "Overweight";
-        }else if (BMI > 29.9 && BMI <=34.9){
-            state = "Obese";
-            explainState = "Obese (stage-1) : More fat and excess weight";
-            tips = "It is necessary to choose food and exercise.";
+        } else if (BMI >= 18.5 && BMI <= 24.9) {
+            state = "Normal"
+            explainState = "The standard of good health";
+            tips = "It must be maintained. Health cannot be enhanced by taking extra or unhealthy food"
+            textColor = 'success';
+            weightText = "OverWeight / Underweight";
+        } else if (BMI > 24.9 && BMI <= 29.9) {
+            state = "Overweight"
+            explainState = "Overweight";
+            tips = "Don't worry. Weight loss will be followed by fatigue and constant tiredness";
+            textColor = 'warning'
+            weightText = "OverWeight";
+        } else if (BMI > 29.9 && BMI <= 34.9) {
+            state = "obese"
+            explainState = "Obese (Stage-1): More fat Excess weight";
+            tips = "It is necessary to choose food and exercise."
             textColor = 'warning';
-            weightText = "High Overweight";
-        } else if (BMI > 34.9 && BMI <=39.9){
+            weightText = "High OverWeight";
+        } else if (BMI > 34.9 && BMI <= 39.9) {
             state = "Obese (high)";
             explainState = "Obese (stage-2) : Excess fat and excess weight. ";
             tips = "Need to eat moderately and exercise alot. Consult your dietician";
             textColor = 'danger';
-            weightText = "Overweight (very high)";
+            weightText = "OverWeight (very high)";
         } else {
-            state = "Extreme Obese";
-            explainState = "Extreme obesity. Risk of death.";
-            tips = "Weight control routine should be implemented immediately . Expert doctor's advice is must.";
+            state = "Extremly obese"
+            explainState = "Extreme Obesity (Final Stage). Risk of Death!";
+            tips = "Weight control routine should be implemented immediately . Expert doctor's advice is must."
             textColor = 'danger';
-            weightText = "Overweight (extreme)";
+            weightText = "OverWeight (extreme)";
         }
-
-
-
-//from
+        // TODO: According to good BMI and given Height calculate the perfect weight for this height
+        //from 
         let healthyBMI1 = 18.5;
         //to
         let healthyBMI2 = 24.9;
@@ -275,51 +275,120 @@ function calculateHealth() {
         healthyWeight1 = Math.round(healthyWeight1);
         //to
         let healthyWeight2 = `${healthyBMI2 * (heightInMeter**2)}`
-        healthyWeight1 = Math.round(healthyWeight2);
-
+        healthyWeight2 = Math.round(healthyWeight2);
+        //a sequence resulth
         let healthyWeight = `${healthyWeight1} to ${healthyWeight2}`
         let healthyBMI = `${healthyBMI1} to ${healthyBMI2}`
-
+        //Average Result
         let averageHealthyWeight = `${(healthyWeight1 + healthyWeight2) / 2}`
         let averageHealthyBMI = `${(healthyBMI1 + healthyBMI2) / 2}`
 
-
+        //TODO: Calculate the difference between healty weight and Given Weight;
         let defferenceWeight;
         if (state === "Underweight") {
             defferenceWeight = `${healthyWeight1 - weight}kg To ${healthyWeight2 - weight}kg`
         } else if (state === "Normal") {
             defferenceWeight = "(N/A) Perfect Weight"
         } else {
-            defferenceWeight = `${weight - healthyWeight1}kg To ${weight - healthyWeight2}kg `
+            defferenceWeight = `${weight - healthyWeight1}kg To ${weight - healthyWeight2}kg`
         }
 
-
+        //TODO; Make the HTML for show the results for each sections
         let htmlForBMI;
         let htmlForCalories;
-        let htmlForButtons;
+        let htmlForButtons
 
-        htmlForCalories = `<div class="my-3 d-flex justify-content-center align-content-center flex-column">
-        <h5 class="card-header text-center my-3">Your Daily ${bodyBurningText} needs</h5>
-        <h3 class="card-title text-center" id="calculateTitle">${bodyBurningText} need Per Day: </h3>
-        <h4 class="d-block font-weight-bold mx-auto style="font-size: 1.5rem;">
-        <sup><i class="fa fa-fire text-danger"></i></sup> <span id="calorieResult"> ${bodyBurning} ${bodyBurningText}/Day</span>
-        </h4>
-        </div>
-        <hr>
-        `
+        htmlForCalories = `
+    <div class="my-3 d-flex justify-content-center align-content-center flex-column">
+    <h5 class="card-header text-center my-3">Your Daily ${bodyBurningText} needs</h5>
+    <h3 class="card-title text-center" id="calculateTitle">${bodyBurningText} need Per Day : </h3>
+    <h4 class="d-block font-weight-bold mx-auto" style="font-size: 1.5rem;">
+        <sup><i class="fa fa-fire text-danger"></i></sup> <span id="calorieResult"> ${bodyBurning}
+            ${bodyBurningText}/Day</span>
+    </h4>
+</div>
+<hr>
+<h5 class="d-inline-block">BMR : </h5>
+<h5 class="d-inline-block text-danger font-weight-bold position-relative float-right"
+    style="font-size: 1.5rem;" id="BMRResult">${BMR}</h5>
+<hr>
+<h5 class="d-inline-block">${bodyBurningText} : (c)</h5>
+<h5 class="d-inline-block text-danger font-weight-bold position-relative float-right"
+    style="font-size: 1.5rem;" id="SD">
+    <i class="fa fa-clipboard"></i> ${BMR} X ${multipicationValue} ${multipicationValue2}
+</h5>
+<hr>
+<h5 class="d-inline-block">Used BMR Law : </h5>
+<h5 class="d-inline-block text-danger font-weight-bold position-relative float-right"
+style="font-size: 1.5rem;" id="SD">
+<i class="fa fa-codepen text-codepen"></i> Heris Bene-Dict 
+</h5>
+<hr>`
 
-
-
+        //TODO: BMI HTML
         htmlForBMI = `
-        <div class="my-3 d-flex justify-content-center align-content-center flex-column text-center">
-        <h5 class="card-header my-3">Your Health Statistics</h5>
-        <h3 class="card-title text-center" id="calculateTitle">Health State (BMI) : </h3>
-        <h4 class="d-block font-weight-bold mx-auto" style="font-size: 1rem;">
+    <div class="my-3 d-flex justify-content-center align-content-center flex-column text-center">
+    <h5 class="card-header my-3">Your Health Statistics</h5>
+    <h3 class="card-title text-center" id="calculateTitle">Health State (BMI) : </h3>
+    <h4 class="d-block font-weight-bold mx-auto" style="font-size: 1rem;">
         <sup><i class="fa fa-${icon} text-${textColor}"></i></sup> &nbsp;&nbsp;<span id="calorieResult"> ${explainState}
         </span>
-        </h4>
+    </h4>
+</div>
+<h4>
+    <ul class="list-group">
+    <li class="list-group-item" style="display: none;" id="BMIChart">Chart : <div id="img d-flex justify-content-center">
+            <img src="bmi-chart.gif" class="d-block mx-auto img" alt="BMI Chart">
         </div>
-        `
+    </li>
+    <li class="list-group-item">BMI Formula : <span
+            class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3"><i
+                class="font-weight-bolder text-muted">=</i> weight(kg) /
+            Height(m) <sup class="font-weight-bolder">2</sup></span>
+    </li>
 
-    }
-}
+    <li class="list-group-item">Your BMI (Body Mass Index) : <span
+    class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3">= ${BMI}</span> <a onclick="showBMIStateTable()" class="link text-primary" id="BMITableBtn">Show BMI Table</a>
+    <div class="card mx-auto" id="BMIStateTable" style="border: none;
+    width: 100%;
+    height: auto;
+    display: none;">
+    <br>
+    <div class="card-body bg-light mx-auto">
+        <b>Check the health stats according to BMI (Body Mass Index) </b>
+    </div>
+    <table class="table table-striped mx-auto">
+        <thead>
+            <tr>
+                <th scope="col">BMI</th>
+                <th scope="col">State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"> &lt; 18.5</th>
+                <td>Low body weight (Underweight)</td>
+            </tr>
+            <tr>
+                <th scope="row">18.5 to 24.9</th>
+                <td>The standard of good health (Normal)</td>
+            </tr>
+            <tr>
+                <th scope="row">25 to 29.9</th>
+                <td>Overweight (Overweight)</td>
+            </tr>
+            <tr>
+                <th scope="row">30 to 34.9</th>
+                <td>"Obese (Stage-1): More fat Excess weight (Obese I)</td>
+            </tr>
+            <tr>
+                <th scope="row">35 to 39.9</th>
+                <td>More obese (stage-2). Excess fat(Obese II)</td>
+            </tr>
+            <tr>
+                <th scope="row">&gt 40</th>
+                <td>Extra thick (last stage). Fear of death!(Obese III Extreme)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>`
