@@ -391,4 +391,39 @@ style="font-size: 1.5rem;" id="SD">
             </tr>
         </tbody>
     </table>
-</div>`
+</div>
+    </li>
+    <li class="list-group-item" id="state">State : <span
+            class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3"><i
+                class="font-weight-bolder text-muted">=</i> ${state}</span>
+    </li>
+    <hr>
+    <h5 class="card-header text-weight-bolder text-muted">Calculated Standard Health</h5>
+        <li class="list-group-item" id="goodValues">1. Your BMI should be : <span
+        class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3"><i
+        class="font-weight-bolder text-muted">=</i> ${healthyBMI}</span>
+        <span
+        class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3"><i
+        class="font-weight-bolder text-muted">=</i> ${averageHealthyBMI} <small>(Average)</small></span>
+        </li>
+        <li class="list-group-item">2.Your Weight should be : <span
+        class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3"><i
+        class="font-weight-bolder text-muted">=</i> ${healthyWeight}</span>
+        <span
+        class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3"><i
+        class="font-weight-bolder text-muted">=</i> ${averageHealthyWeight} <small>(Average)</small></span>
+        </li>
+        <li class="list-group-item" id="goodWeightDifference">${weightText}<span
+        class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3"><i
+        class="font-weight-bolder text-muted">=</i> ${defferenceWeight}</span>
+        </li>
+        <hr>
+        <h5 class="card-header text-weight-bolder text-muted">Suggetions</h5>
+        <li class="list-group-item" id="tips">Tips : <span
+        class=" alert responsive d-block font-weight-bolder text-warning text-muted bg-light my-3"><i
+        class="font-weight-bolder text-muted">=</i> ${tips}</span>
+        </li>
+    </ul>
+</h4>
+    `
+    
