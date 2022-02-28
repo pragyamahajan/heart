@@ -426,15 +426,19 @@ style="font-size: 1.5rem;" id="SD">
     </ul>
 </h4>
     `
-  htmlForButtons = `<button class="btn btn-outline-warning" type ="submit" onclick ="location.reload();">Reload</button>
-  <button class="btn btn-outline-success float-right" type ="submit" onclick ="location.print();">print\save</button>`
-  result.classList.add('d-none');
+        //TODO: Button HTML 
+        htmlForButtons = `
+    <button class="btn btn-outline-warning" type="submit" onclick="location.reload();">Reload</button>
+    <button class="btn btn-outline-success position-relative float-right" type="submit"
+    onclick="window.print();">Print/Save</button>`
+        result.classList.add('d-none');
 
-  errorAlert.style.display = "none";
-  errorAlert.style.display = "block";
-  setTimeout( () => {
-      successAlert.classList.add('hide')
-      successAlert.style.display ="none";
+        //TODO: Add alert with success message when calculate will be finished
+        errorAlert.style.display = "none";
+        successAlert.style.display = "block";
+        setTimeout(() => {
+            successAlert.classList.add('hide')
+            successAlert.style.display = "none";
+        }, 4000);
 
-  }, 4000);
-
+        
