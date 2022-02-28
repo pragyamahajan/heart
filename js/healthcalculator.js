@@ -426,4 +426,15 @@ style="font-size: 1.5rem;" id="SD">
     </ul>
 </h4>
     `
-    
+  htmlForButtons = `<button class="btn btn-outline-warning" type ="submit" onclick ="location.reload();">Reload</button>
+  <button class="btn btn-outline-success float-right" type ="submit" onclick ="location.print();">print\save</button>`
+  result.classList.add('d-none');
+
+  errorAlert.style.display = "none";
+  errorAlert.style.display = "block";
+  setTimeout( () => {
+      successAlert.classList.add('hide')
+      successAlert.style.display ="none";
+
+  }, 4000);
+
