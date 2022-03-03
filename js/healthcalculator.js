@@ -441,4 +441,74 @@ style="font-size: 1.5rem;" id="SD">
             successAlert.style.display = "none";
         }, 4000);
 
-        
+        //TODO: Show the results according to user need
+        if (calculateItemChecked === "bmr") {
+            calorieSection.innerHTML = htmlForCalories;
+            healthSection.innerHTML = "";
+        } else if (calculateItemChecked === "bmi") {
+            healthSection.innerHTML = htmlForBMI;
+            calorieSection.innerHTML = "";
+        } else if (calculateItemChecked === "all") {
+            healthSection.innerHTML = htmlForBMI;
+            calorieSection.innerHTML = htmlForCalories;
+        }
+        buttons.innerHTML = htmlForButtons;
+
+        //! Show the navigator
+        let navigator = document.getElementById('navigator');
+        if (calculateItemChecked === "all") {
+            navigator.style.display = "block";
+        } else {
+            navigator.style.display = "none";
+        }
+    } //End of the else statement
+}
+
+//TODO: A function for showing BMI chart
+function showChart() {
+    BMIChart.style.display = "block";
+}
+
+//TODO: A function to showing the BMI state Table
+function showBMIStateTable() {
+    if (BMIStateTable.style.display === "none") {
+        BMIStateTable.style.display = "block";
+        BMITableBtn.innerHTML = "Hide BMI Table"
+    } else {
+        BMIStateTable.style.display = "none";
+        BMITableBtn.innerHTML = "Show BMI Table"
+    }
+}
+
+//!Add Event Listener For article Sections
+let readSectionBtn = document.getElementById('readSectionBtn');
+readSectionBtn.addEventListener('click', () => {
+    let readSectionArticle = document.getElementById('readSectionArticle');
+    if (readSectionArticle.style.display === "none") {
+        readSectionArticle.style.display = "block";
+        readSectionBtn.innerHTML = `<i class="fa fa-minus float-right"></i>`;
+    } else {
+        readSectionArticle.style.display = "none";
+        readSectionBtn.innerHTML = `<i class="fa fa-plus float-right"></i>`;
+    }
+});
+
+let BMIMore = document.getElementById('BMIMore');
+BMIMore.addEventListener('click', () => {
+    let BMIArticle = document.getElementById('BMIArticle');
+    if (BMIArticle.style.display === "none") {
+        BMIArticle.style.display = "block";
+    } else {
+        BMIArticle.style.display = "none";
+    }
+})
+
+let BMRMore = document.getElementById('BMRMore');
+BMRMore.addEventListener('click', () => {
+    let BMRArticle = document.getElementById('BMRArticle');
+    if (BMRArticle.style.display === "none") {
+        BMRArticle.style.display = "block";
+    } else {
+        BMRArticle.style.display = "none";
+    }
+})
