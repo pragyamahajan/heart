@@ -513,22 +513,53 @@ BMRMore.addEventListener('click', () => {
     }
 })
 
-let overweightRiskContent = document.getElementById ('overweightRiskContent');
+let overweightRiskContent = document.getElementById('overweightRiskContent');
 overweightRiskContent.addEventListener('click', () => {
-    let overweightRiskArticle = document.getElementById ('overweightRiskArticle');
-    if (overweightRiskArticle.style.display === "none"){
+    let overweightRiskArticle = document.getElementById('overweightRiskArticle');
+    if (overweightRiskArticle.style.display === "none") {
         overweightRiskArticle.style.display = "block";
     } else {
-        overweightRiskArticle.style.display = "none"
+        overweightRiskArticle.style.display = "none";
     }
 })
-let underweightRiskContent = document.getElementById ('underweightRiskContent');
+let underweightRiskContent = document.getElementById('underweightRiskContent');
 underweightRiskContent.addEventListener('click', () => {
-    let underweightRiskArticle = document.getElementById ('underweightRiskArticle');
-    if (underweightRiskArticle.style.display === "none"){
+    let underweightRiskArticle = document.getElementById('underweightRiskArticle');
+    if (underweightRiskArticle.style.display === "none") {
         underweightRiskArticle.style.display = "block";
     } else {
         underweightRiskArticle.style.display = "none";
+    }
+})
+let BMILimitContent = document.getElementById('BMILimitContent');
+BMILimitContent.addEventListener('click', () => {
+    let BMILimitArticle = document.getElementById('BMILimitArticle');
+    if (BMILimitArticle.style.display === "none") {
+        BMILimitArticle.style.display = "block";
+    } else {
+        BMILimitArticle.style.display = "none";
+    }
+})
+let BMITableContent = document.getElementById('BMITableContent');
+BMITableContent.addEventListener('click', () => {
+    let BMIStateTable2 = document.getElementById('BMIStateTable2');
+    if (BMIStateTable2.style.display === "none") {
+        BMIStateTable2.style.display = "block";
+    } else {
+        BMIStateTable2.style.display = "none";
+    }
+})
+
+//!For help and support section
+let helpSectionBtn = document.getElementById('helpSectionBtn');
+helpSectionBtn.addEventListener('click', () => {
+    let helpArea = document.getElementById('helpArea');
+    if (helpArea.style.display === 'none') {
+        helpArea.style.display = 'block';
+        helpSectionBtn.innerHTML = `<i class="fa fa-minus float-right"></i>`;
+    } else {
+        helpArea.style.display = 'none';
+        helpSectionBtn.innerHTML = `<i class="fa fa-plus float-right"></i>`;
     }
 })
 
@@ -536,11 +567,11 @@ let issue = document.getElementById("issue");
 let improve = document.getElementById("improve");
 let surveyAlert = document.getElementById("surveyAlert");
 ensureBtn.addEventListener('click', (e) => {
-    let helpIssue = document.querySelector("input [name='isIssue']:checked").value;
-    let helpImprove = document.querySelector("input [name='isImprove']:checked").value;
+    let helpIssue = document.querySelector("input[name='isIssue']:checked").value;
+    let helpImprove = document.querySelector("input[name='isImprove']:checked").value;
     if (helpIssue === "noIssue" && helpImprove === "noImprove") {
-        surveyAlert.style.display = "block";
+        surveyAlert2.style.display = "block";
     } else {
-        surveyAlert.style.display = "block"
+        surveyAlert.style.display = "block";
     }
 });
