@@ -438,3 +438,43 @@ style="font-size: 1.5rem;" id="SD">
 
   }, 4000);
 
+
+  if (calculateItemChecked === "bmr") {
+      calorieSelection.innerHTML = htmlForCalories;
+      healthSelection.innerHTML = "";
+
+  } else if (calculateItemChecked === "bmi") {
+    calorieSelection.innerHTML = htmlForCalories;
+    healthSelection.innerHTML = "";
+  } else if (calculateItemChecked === "all") {
+    calorieSelection.innerHTML = htmlForCalories;
+    healthSelection.innerHTML = "";
+  }
+  buttons.innerHTML = htmlForButtons;
+
+
+
+  function showChart() {
+      BMIChart.style.display = "block";
+  }
+
+  function showBMIStateTable() {
+      if (BMIStateTable.style.display === "none") {
+          BMIStateTable.style.display = "block";
+          BMITableBtn.innerHTML = "Hide BMI Table"
+      } else {
+          BMIStateTable.style.display = "none";
+          BMITableBtn.innerHTML = "Show BMI Table"
+      }
+  }
+
+  let readSectionBtn = document.getElementById ('readSectionBtn');
+  readSectionBtn.addEventListener('click', () => {
+      let readSectionArticle = document.getElementById ('readSectionArticle');
+      if (readSectionArticle.style.display === "none") {
+          readSectionArticle.style.display = "block";
+          readSectionBtn.innerHTML = `<i class="fa fa-minus float-right"></i>`;
+      }
+  });
+
+  let BMIMore = document.getElementById('BMIM')
