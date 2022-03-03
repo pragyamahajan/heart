@@ -512,3 +512,35 @@ BMRMore.addEventListener('click', () => {
         BMRArticle.style.display = "none";
     }
 })
+
+let overweightRiskContent = document.getElementById ('overweightRiskContent');
+overweightRiskContent.addEventListener('click', () => {
+    let overweightRiskArticle = document.getElementById ('overweightRiskArticle');
+    if (overweightRiskArticle.style.display === "none"){
+        overweightRiskArticle.style.display = "block";
+    } else {
+        overweightRiskArticle.style.display = "none"
+    }
+})
+let underweightRiskContent = document.getElementById ('underweightRiskContent');
+underweightRiskContent.addEventListener('click', () => {
+    let underweightRiskArticle = document.getElementById ('underweightRiskArticle');
+    if (underweightRiskArticle.style.display === "none"){
+        underweightRiskArticle.style.display = "block";
+    } else {
+        underweightRiskArticle.style.display = "none";
+    }
+})
+
+let issue = document.getElementById("issue");
+let improve = document.getElementById("improve");
+let surveyAlert = document.getElementById("surveyAlert");
+ensureBtn.addEventListener('click', (e) => {
+    let helpIssue = document.querySelector("input [name='isIssue']:checked").value;
+    let helpImprove = document.querySelector("input [name='isImprove']:checked").value;
+    if (helpIssue === "noIssue" && helpImprove === "noImprove") {
+        surveyAlert.style.display = "block";
+    } else {
+        surveyAlert.style.display = "block"
+    }
+});
