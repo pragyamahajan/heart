@@ -1,0 +1,29 @@
+:root{
+    --gradient: linear-gradient()
+}
+
+.card{
+    background: #222;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    max-width: 22vw;
+}
+
+
+button.modalbutton{
+
+}
+
+.liveSearchBar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.search{
+    margin: 3vh;
+    padding: 3vh;
+    
+}
