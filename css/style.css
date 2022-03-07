@@ -146,6 +146,8 @@ margin-left: 1vw;
 margin-right: 1vw;
 text-align: center;
 max-width: 70vw;
+border-bottom-left-radius: 10px;
+border-top-right-radius: 10px;
 }
 .search{
 margin: 3vh;

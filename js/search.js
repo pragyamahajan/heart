@@ -23,7 +23,7 @@ $(document).ready(function () {
         let result;
         $("#filter-count").text("Number of Results = " + count);
         if (count == 0) {
-            document.getElementById("cond").innerHTML = `No Results Found`;
+            document.getElementById("cond").innerHTML = `No Diseases Found`;
         }
         else {
             `<p><p/>`
