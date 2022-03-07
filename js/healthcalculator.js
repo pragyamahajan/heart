@@ -218,7 +218,7 @@ function calculateHealth() {
 
         // !Calculate BMI according to height and weight
         heightInMeter = `${height / 100}`;
-        let BMI = `${weight / (heightInMeter**2)}`
+        let BMI = `${weight / (heightInMeter ** 2)}`
         BMI = Number(BMI).toFixed(1);
         console.log(BMI, heightInMeter);
 
@@ -271,10 +271,10 @@ function calculateHealth() {
         //to
         let healthyBMI2 = 24.9;
         //from
-        let healthyWeight1 = `${healthyBMI1 * (heightInMeter**2)}`
+        let healthyWeight1 = `${healthyBMI1 * (heightInMeter ** 2)}`
         healthyWeight1 = Math.round(healthyWeight1);
         //to
-        let healthyWeight2 = `${healthyBMI2 * (heightInMeter**2)}`
+        let healthyWeight2 = `${healthyBMI2 * (heightInMeter ** 2)}`
         healthyWeight2 = Math.round(healthyWeight2);
         //a sequence resulth
         let healthyWeight = `${healthyWeight1} to ${healthyWeight2}`
