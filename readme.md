@@ -1,7 +1,7 @@
 # Project Name
 > Outline a brief description of your project.
 
-> [Live demo here](https://www.example.com).
+> [Live demo here](https://heartfit-dsn.netlify.app/).
 
 ## Table of Contents
 * [General Info](#general-information)
