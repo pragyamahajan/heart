@@ -2,7 +2,8 @@ $(document).ready(function () {
     $("#filter").keyup(function () {
 
         // Retrieve the input field text and reset the count to zero
-        var filter = $(this).val(), count = 0;
+        var filter = $(this).val(),
+            count = 0;
 
         // Loop through the comment list
         $("nav ul li.search").each(function () {
@@ -21,28 +22,26 @@ $(document).ready(function () {
         // Update the count
 
         let result;
-        $("#filter-count").text("Number of Results = " + count);
+        $("#filter-count").text("Number of Diseases = " + count);
         if (count == 0) {
             document.getElementById("cond").innerHTML = `No Diseases Found`;
-        }
-        else {
+        } else {
             `<p><p/>`
         }
-    }
-    );
+    });
 });
+
 
 // Modal
 
 var btn = document.querySelectorAll("button.modalbutton");
 
-// All page modals
 var modals = document.querySelectorAll('.modal');
 
-// Get the <span> element that closes the modal
 var spans = document.getElementsByClassName("close");
 
-// When the user clicks the button, open the modal
+//open
+
 for (var i = 0; i < btn.length; i++) {
     btn[i].onclick = function (e) {
         e.preventDefault();
@@ -51,7 +50,8 @@ for (var i = 0; i < btn.length; i++) {
     }
 }
 
-// When the user clicks on <span> (x), close the modal
+//close
+
 for (var i = 0; i < spans.length; i++) {
     spans[i].onclick = function () {
         for (var index in modals) {
@@ -60,7 +60,8 @@ for (var i = 0; i < spans.length; i++) {
     }
 }
 
-// When the user clicks anywhere outside of the modal, close it
+//outside
+
 window.onclick = function (event) {
     if (event.target.classList.contains('modal')) {
         for (var index in modals) {
