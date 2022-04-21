@@ -36,5 +36,11 @@ a:active {
 }
 
 .main {
-	max-width: 65em;
+	max-width: 90vw;
+}
+
+@media screen and (max-width: 768px) {
+.img{
+	display: none;
+}
 }
