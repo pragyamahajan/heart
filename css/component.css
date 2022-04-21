@@ -40,10 +40,10 @@
 .nl-form input,
 .nl-form select  {
 	line-height: inherit;
-	display: inline-block;
-	color: #b14943;
-	cursor: pointer;
-	border-bottom: 1px dashed #b14943;
+    display: inline-block;
+    color: rgb(83 8 45 / 84%);
+    cursor: pointer;
+    border-bottom: 1px dashed rgb(0 0 0);
 }
 .nl-field ul {
 	position: absolute;

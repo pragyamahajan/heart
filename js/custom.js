@@ -47,7 +47,7 @@ function handleSubmit(e) {
     var again = document.getElementsByTagName("again")[0];
     again.appendChild(button);
     button.addEventListener("click", function () {
-      window.location = "index.html";
+      window.location = "predictor.html";
     });
   }, 300);
 }

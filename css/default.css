@@ -39,6 +39,16 @@ a:active {
 	max-width: 90vw;
 }
 
+.mainpage{
+	display: flex;
+	justify-content: center;
+}
+.img{
+	margin-left: auto;
+    margin-right: auto;
+	display: flex;
+	justify-content: center;
+}
 @media screen and (max-width: 768px) {
 .img{
 	display: none;
