@@ -1,7 +1,11 @@
-# Project Name
-> Outline a brief description of your project.
+# HeartFit
+> Web application that easily predicts the possibility of a user having a heart attack.
+> 
+> Advanced BMI/BMR calculator.
+> 
+> Displays the various heart diseases linked directly or indirectly with Cardiac Arrest.
 
-> [Live demo here](https://heartfit-dsn.netlify.app/).
+> [Live Project here](https://heartfit-dsn.netlify.app/).
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -19,7 +23,7 @@
 - Project also consists of a chatbot that will be used for Hospital appointment booking when the user gets acknowledged as high risk.
 - The second major element of the website is the Advanced BMI/BMR calculator.
 The calculator will subsequently also show how less or more the weight of the user is, calories required to get in balance, tips according to the BMI, BMR charts, etc.
-- Final part of the project displays the various heart diseases linked directly or indirectly, showing its symptoms, precautions, and the best hospital in India for particular disease, locating it with the help of Google Maps API on our website.
+- Final part of the project displays the various heart diseases linked directly or indirectly, showing its symptoms, precautions, and the best hospital in India for particular disease, locating it with the help of Google Maps API in website.
 - Website will be responsive so as to be accessible on mobile phones, tabs, laptops, and PCs. To make the website function quickly, the website is authentication-free, and there is no database attached and not data has been stored that will also maintain the privacy of the user's medical details. 
 
 
@@ -31,15 +35,6 @@ The calculator will subsequently also show how less or more the weight of the us
 - collect.chat
 - GoogleMapsAPI
 
-## Screenshots
-![hp1](./img/ss1.png)
-![hp2](./img/ss2.png)
-
-![hd1](./img/ss3.png)
-![hd2](./img/ss4.png)
-
-![bmi](./img/ss5.png)
-![bmr](./img/ss6.png)
 
 ## Usage
 
